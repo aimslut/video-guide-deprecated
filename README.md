@@ -46,7 +46,7 @@ This works well specifically for my setup, and if you don't have a particularly 
 
 Twitch also has a soft-cap for non-partners at 8Mbps. It is indeed possible to stream up to 14.7Mbps as a non-partner, but only viewers who join before the livestream starts will be able to view at this bitrate. Anyone who joins later will get a stream that's been compressed down to ~6Mbps.
 
-### CPU Presets
+### CPU Encoding Settings
 Variable | Value | Reasoning / Description
 ------------ | ------------- | ------------
 **Encoder** | x264 | Personally I record already using NVENC at the same time, and due to the way OBS works, I don't want to use additional PCI-e bandwidth for this.
@@ -67,7 +67,7 @@ Breakdown of x264 Options
 *   **trellis=1** - Algorithm to reduce noise, some quality presets set this to 2 which increases compute time significantly impacts performance, this flag just limits it essentially.
 *   **direct-pred=spatial** - Another algorithm which can increase compute time on certain presets. Limits it again.
 
-### NVENC Settings
+### NVENC Encoding Settings
 Variable | Value | Reasoning / Description
 ------------ | ------------- | ------------
 **Encoder** | NVENC H.264 (new) | Least amount of CPU overhead, useful if you don't have a very powerful system.
