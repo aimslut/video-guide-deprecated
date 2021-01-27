@@ -20,7 +20,7 @@ Personally I've encountered way too many issues with Shadowplay, and it honestly
 Video Settings
 *   **Base Res** - 1920x1080 - Canvas should ideally be the same size as your native game resolution
 *   **Scaled Res** - Should be the same as your base res for recordings
-*   **FPS** - Fractional, 360/1 - Personal preference, I choose to record at this framerate as it gives nice motionblur once my tmix filters are applied.
+*   **FPS** - Fractional, 360/1 - Personal preference, I choose to record at this framerate as it gives nice motionblur once my tmix filters are applied. While streaming, I may have to adjust this to 240/1, otherwise it's a bit too taxing to have Replay Buffer, Virtual Camera ( to interface between the two obs clients ) and Streaming all on at the same time.
 
 Replay Buffer Settings
 *   **Max Replay Time** - 240s - 4 minutes is long enough to capture most OW teamfights just incase you're fighting the entire time and wanted to clip something earlier.
