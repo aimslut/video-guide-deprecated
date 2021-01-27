@@ -42,7 +42,9 @@ Variable | Value | Reasoning / Description
 In the future I'll be playing around with settings more and being able to get actual quantitative data for each of the settings and how they impact performance along with visual fidelity.
 
 ## Streaming Settings
-This works well specifically for my setup, and if you don't have a particularly strong CPU, I'd advise to use some NVENC based settings which I'll add after the CPU x264 settings. If you're only able to stream at lower bitrates, try to stick to **NVENC** encoding as it performs better at lower bitrates. Also, if you don't have much network bandwidth, ie <20Mbps, use NVENC on Twitch. Twitch uses the source quality of your stream, however youtube does live transcoding and will *almost* always give you lower quality due to their own compression algorithms.
+This works well specifically for my setup, and if you don't have a particularly strong CPU, I'd advise to use some NVENC based settings which I'll add after the CPU x264 settings. If you're only able to stream at lower bitrates, try to stick to **NVENC** encoding as it performs better at lower bitrates. 
+
+Also, if you don't have much network bandwidth, ie <20Mbps, use NVENC on Twitch specifically. Twitch uses the source quality of your stream, however youtube does live transcoding and will *almost* always give you lower quality due to their own compression algorithms.
 
 Twitch also has a soft-cap for non-partners at 8Mbps. It is indeed possible to stream up to 14.7Mbps as a non-partner, but only viewers who join before the livestream starts will be able to view at this bitrate. Anyone who joins later will get a stream that's been compressed down to ~6Mbps.
 
