@@ -85,6 +85,20 @@ Of all the things I've tried, I like the look of the FFMPEG tmix filter the most
 I have 2 main sets of settings, my own based on Voukoder, and Break's settings. My own are more focused on finding a nice middleground between file sizes and quality. Break's settings are more geared towards quality regardless of filesize.
 
 #### Voukoder Settings
+1. Go [here](https://www.voukoder.org/).
+2. Download Voukoder and Voukoder Connector ( for your application of choice ).
+3. Create a new Voukoder render preset
+4. Use these settings:
+Variable | Value
+------------ | -------------
+Codec | H.264 (NVIDIA NVENC)
+Preset | High Quality
+Profile | Main
+Strategy | CBR
+Bitrate | 72000
+Buffer | 13000
+Filter->Scale | 3840x2160 Lanczos
+Output | Disable Faststart
 
 #### Break's Settings
 
