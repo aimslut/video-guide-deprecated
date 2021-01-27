@@ -89,6 +89,7 @@ I have 2 main sets of settings, my own based on Voukoder, and Break's settings. 
 2. Download Voukoder and Voukoder Connector ( for your application of choice ).
 3. Create a new Voukoder render preset
 4. Use these settings:
+
 Variable | Value
 ------------ | -------------
 Codec | H.264 (NVIDIA NVENC)
