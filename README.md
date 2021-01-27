@@ -29,8 +29,11 @@ Replay Buffer Settings
 In the future I'll be playing around with settings more and being able to get actual quantitative data for each of the settings and how they impact performance along with visual fidelity.
 
 ## Streaming Settings
-This works well specifically for my setup, and if you don't have a particularly strong CPU, I'd advise to use some NVENC based settings which I'll add after the CPU x264 settings.
+This works well specifically for my setup, and if you don't have a particularly strong CPU, I'd advise to use some NVENC based settings which I'll add after the CPU x264 settings. If you're only able to stream at lower bitrates, try to stick to **NVENC** encoding as it performs better at lower bitrates. Also, if you don't have much network bandwidth, ie <20Mbps, use NVENC on Twitch. Twitch uses the source quality of your stream, however youtube does live transcoding and will *almost* always give you lower quality due to their own compression algorithms.
 
+Twitch also has a soft-cap for non-partners at 8Mbps. It is indeed possible to stream up to 14.7Mbps as a non-partner, but only viewers who join before the livestream starts will be able to view at this bitrate. Anyone who joins later will get a stream that's been compressed down to ~6Mbps.
+
+### CPU Presets
 *   **Encoder** - x264 - Personally I record already using NVENC at the same time, and due to the way OBS works, I don't want to use additional PCI-e bandwidth for this.
 *   **Enforce Settings** - Disabled - Allows you to increase your bitrate past 6500, the limit for non-partnered streamers is 8000Kbps.
 *   **Rescale Output** - Unchecked currently - Personal preference mainly.
@@ -49,9 +52,22 @@ Breakdown of x264 Options
 *   **trellis=1** - Algorithm to reduce noise, some quality presets set this to 2 which increases compute time significantly impacts performance, this flag just limits it essentially.
 *   **direct-pred=spatial** - Another algorithm which can increase compute time on certain presets. Limits it again.
 
+### NVENC Settings
+These settings have mostly the same descriptions as above, so I won't repeat that information
+*   **Encoder** - NVENC H.264 (new)
+*   **Rate Control** - CBR - Constant Bitrate, majority of streaming services require you to use CBR, this is mainly because it's easier for twitch to ingest and monitor on their side.
+*   **Bitrate** - 8000
+*   **Keyframe Interval** - 0
+*   **Preset** - Max Quality - It's either this or Quality. Max Quality is generally better for finer details, but is slightly more intensive than Quality as it uses 2-passes rather than 1.
+*   **Profile** - High
+*   **Look Ahead** - Enabled - Can help with keeping quality during faster movements especially at lower bitrates.
+*   **Psycho Visual Tuning** - Disabled
+*   **GPU** - 0
+*   **Max B-Frames** - 4 if look-ahead enabled, 2 otherwise ( Twitch requires a minimum of 2 ).
+
 Video Settings
 *   **Base Res** - 1920x1080 - Canvas should ideally be the same size as your native game resolution.
-*   **Scaled Res** - 1280x720 - Whatever you choose to stream at.
+*   **Scaled Res** - 1920x1080 - Whatever you choose to stream at.
 *   **FPS** - common 60 - Personal preference, you can stream up to 120fps on twitch ( but you'll have worse quality too as you get your bitrate/fps per frame ).
 
 ## Cutting Clips
