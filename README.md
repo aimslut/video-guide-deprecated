@@ -17,6 +17,15 @@ Personally I've encountered way too many issues with Shadowplay, and it honestly
 *   **GPU** - 0 - System specific, just allows you to choose a dedicated GPU to encode if you have a secondary one.
 *   **Max B-Frames** - If you have look-ahead enabled, set it to 4, if not, set it to 0 for recording for the least amount of overhead.
 
+Video Settings
+*   **Base Res** - 1920x1080 - Canvas should ideally be the same size as your native game resolution
+*   **Scaled Res** - Should be the same as your base res for recordings
+*   **FPS** - Fractional, 360/1 - Personal preference, I choose to record at this framerate as it gives nice motionblur once my tmix filters are applied.
+
+Replay Buffer Settings
+*   **Max Replay Time** - 240s - 4 minutes is long enough to capture most OW teamfights just incase you're fighting the entire time and wanted to clip something earlier.
+*   **Max Memory** 8192MB - I recommend setting this no more than half the amount of your RAM.
+
 In the future I'll be playing around with settings more and being able to get actual quantitative data for each of the settings and how they impact performance along with visual fidelity.
 
 ## Streaming Settings
@@ -40,6 +49,10 @@ Breakdown of x264 Options
 *   **trellis=1** - Algorithm to reduce noise, some quality presets set this to 2 which increases compute time significantly impacts performance, this flag just limits it essentially.
 *   **direct-pred=spatial** - Another algorithm which can increase compute time on certain presets. Limits it again.
 
+Video Settings
+*   **Base Res** - 1920x1080 - Canvas should ideally be the same size as your native game resolution.
+*   **Scaled Res** - 1280x720 - Whatever you choose to stream at.
+*   **FPS** - Fractional, 90/1 - Personal preference, you can stream up to 120fps on twitch.
 ## Frame Blending
 Of all the things I've tried, I like the look of the FFMPEG tmix filter the most and honestly one of the main reasons I like it the most is that firstly it looks clean, but also doesn't need it's own application specifically for it, it uses FFMPEG which I already use for some other things. ( Remuxing, Scaling etc ) 
 
