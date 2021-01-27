@@ -33,6 +33,7 @@ This works well specifically for my setup, and if you don't have a particularly 
 *   **Profile** - High - Set to High. Profile determines a group of settings in the H.264 Codec. It doesn’t impact performance and gives access to a set of features that are key to streaming.
 *   **Tune** - ( None ) - Literally the most useless thing in OBS. :/
 *   **x264 Options** - `threads=16 rc-lookahead=60 trellis=1 direct-pred=spatial`
+
 Breakdown of x264 Options
 *   **threads=16** - x264 isn't useable past so many threads, so this flag just defines how many it can use to begin with. I'm currently still playing around with the threads value to find what works best for me in order to maintain as smooth gameplay as I can.
 *   **rc-lookahead=60** - Don't go past the framerate you're streaming at. Essentially it looks at the next frames in order to determine what has changed between frames. Allows you to get better quality during motion specifically with not much performance impact at all.
