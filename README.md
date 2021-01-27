@@ -41,10 +41,10 @@ This works well specifically for my setup, and if you don't have a particularly 
 *   **Preset** - Slow - All depends on what your computer can handle comfortably. Personally I get ~10% cpu usage on OBS with the Slow preset and I'm still tinkering to see where my system performs at its best. Ideally if your computer can handle it, I'd recommend Slow, but if you're already trying to record at a high FPS, it can be incredibly taxing for your system. I'd say just use trial and error to see what works best for your use case.
 *   **Profile** - High - Set to High. Profile determines a group of settings in the H.264 Codec. It doesn’t impact performance and gives access to a set of features that are key to streaming.
 *   **Tune** - ( None ) - Literally the most useless thing in OBS. :/
-*   **x264 Options** - `threads=12 rc-lookahead=60 trellis=1 direct-pred=spatial`
+*   **x264 Options** - `threads=16 rc-lookahead=60 trellis=1 direct-pred=spatial`
 
 Breakdown of x264 Options
-*   **threads=12** - x264 isn't useable past so many threads, so this flag just defines how many it can use to begin with. I'm currently still playing around with the threads value to find what works best for me in order to maintain as smooth gameplay as I can.
+*   **threads=16** - x264 isn't useable past so many threads, so this flag just defines how many it can use to begin with. I'm currently still playing around with the threads value to find what works best for me in order to maintain as smooth gameplay as I can.
 *   **rc-lookahead=60** - Don't go past the framerate you're streaming at. Essentially it looks at the next frames in order to determine what has changed between frames. Allows you to get better quality during motion specifically with not much performance impact at all.
 *   **trellis=1** - Algorithm to reduce noise, some quality presets set this to 2 which increases compute time significantly impacts performance, this flag just limits it essentially.
 *   **direct-pred=spatial** - Another algorithm which can increase compute time on certain presets. Limits it again.
@@ -52,7 +52,7 @@ Breakdown of x264 Options
 Video Settings
 *   **Base Res** - 1920x1080 - Canvas should ideally be the same size as your native game resolution.
 *   **Scaled Res** - 1280x720 - Whatever you choose to stream at.
-*   **FPS** - Fractional, 90/1 - Personal preference, you can stream up to 120fps on twitch.
+*   **FPS** - common 60 - Personal preference, you can stream up to 120fps on twitch ( but you'll have worse quality too as you get your bitrate/fps per frame ).
 
 ## Cutting Clips
 Before I do anything with the clips, I extract whatever I want to keep using [Lossless-Cut](https://github.com/mifi/lossless-cut/). This allows me to minimize time spent in later stages as you wouldn't have to process as much. Just open each clip in Lossless-Cut, press I to mark the beginning, and O to mark the end. Change the output container to MP4 so it also remuxs the clip from MKV -> MP4
