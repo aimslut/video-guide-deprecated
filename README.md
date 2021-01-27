@@ -53,8 +53,22 @@ Video Settings
 *   **Base Res** - 1920x1080 - Canvas should ideally be the same size as your native game resolution.
 *   **Scaled Res** - 1280x720 - Whatever you choose to stream at.
 *   **FPS** - Fractional, 90/1 - Personal preference, you can stream up to 120fps on twitch.
+
+## Cutting Clips
+Before I do anything with the clips, I extract whatever I want to keep using [Lossless-Cut](https://github.com/mifi/lossless-cut/). This allows me to minimize time spent in later stages as you wouldn't have to process as much. Just open each clip in Lossless-Cut, press I to mark the beginning, and O to mark the end. Change the output container to MP4 so it also remuxs the clip from MKV -> MP4
+
 ## Frame Blending
-Of all the things I've tried, I like the look of the FFMPEG tmix filter the most and honestly one of the main reasons I like it the most is that firstly it looks clean, but also doesn't need it's own application specifically for it, it uses FFMPEG which I already use for some other things. ( Remuxing, Scaling etc ) 
+Of all the things I've tried, I like the look of the FFMPEG tmix filter the most and honestly one of the main reasons I like it the most is that firstly it looks clean, but also doesn't need it's own application specifically for it, it uses FFMPEG which I already use for some other things. ( Remuxing, Scaling etc ).
+
+1. Install FFMPEG if you haven't already [( Tutorial )](https://www.thewindowsclub.com/how-to-install-ffmpeg-on-windows-10).
+2. Save the `resample_all_descending.bat` .
+3. Edit the `tmix=frames=6` to your desired resample rate ( recording fps/output fps -> 360/6 = 6 ).
+4. Output file will end with `_resampled`.
 
 ## Render Settings
 I have 2 main sets of settings, my own based on Voukoder, and Break's settings. My own are more focused on finding a nice middleground between file sizes and quality. Break's settings are more geared towards quality regardless of filesize.
+
+#### Voukoder Settings
+
+#### Break's Settings
+
