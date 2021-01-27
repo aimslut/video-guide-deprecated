@@ -7,7 +7,7 @@ Personally I've encountered way too many issues with Shadowplay, and it honestly
 
 [240fps -> tmix -> 60fps -> voukoder](https://youtu.be/eB4CjL2svH4) ( Thanks Owen )
 
-[960fps -> resample -> 29.97fps -> break](https://youtu.be/SeSQ1UdptFc) ( Thanks Break )
+[960fps -> resample -> 29.97fps -> break](https://youtu.be/SeSQ1UdptFc) ( Thanks Break ( Only highlighting the Render settings ))
 
 ## Recording Settings
 ### Recording Tab
