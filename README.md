@@ -2,6 +2,12 @@
 More than anything, this is a place to compound all my thoughts, ideas or findings relating to video recording/creation/streaming.
 Seeing as I mainly use OBS and not Shadowplay/Share, I'll be focusing on that.
 Personally I've encountered way too many issues with Shadowplay, and it honestly just isn't as flexible as OBS.
+### Examples
+[360fps -> tmix -> 60fps -> voukoder](https://youtu.be/-We6ixtYrbE)
+
+[240fps -> tmix -> 60fps -> voukoder](https://youtu.be/eB4CjL2svH4) ( Thanks Owen )
+
+[960fps -> resample -> 29.97fps -> break](https://youtu.be/SeSQ1UdptFc) ( Thanks Break )
 
 ## Recording Settings
 ### Recording Tab
