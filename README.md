@@ -38,7 +38,7 @@ This works well specifically for my setup, and if you don't have a particularly 
 *   **Bitrate** - 8000 - Ideally should be under ~75% of your upload speed, but use trial and error to see what works well for you. Personally I get ~16Mbps upload so 8Mbps is fine for me to stream at.
 *   **Custom Buffer Size** - Disabled - Most streaming services don't utilise custom buffer sizes.
 *   **Keyframe Interval** - 2 - Most streaming platforms require you to use 2.
-*   **Preset** - Medium - All depends on what your computer can handle comfortably. Personally I get ~10% cpu usage on OBS with the Medium preset and I'm still tinkering to see where my system performs at its best. Ideally if your computer can handle it, I'd recommend Slow, but if you're already trying to record at a high FPS, it can be incredibly taxing for your system. I'd say just use trial and error to see what works best for your use case.
+*   **Preset** - Slow - All depends on what your computer can handle comfortably. Personally I get ~10% cpu usage on OBS with the Slow preset and I'm still tinkering to see where my system performs at its best. Ideally if your computer can handle it, I'd recommend Slow, but if you're already trying to record at a high FPS, it can be incredibly taxing for your system. I'd say just use trial and error to see what works best for your use case.
 *   **Profile** - High - Set to High. Profile determines a group of settings in the H.264 Codec. It doesn’t impact performance and gives access to a set of features that are key to streaming.
 *   **Tune** - ( None ) - Literally the most useless thing in OBS. :/
 *   **x264 Options** - `threads=12 rc-lookahead=60 trellis=1 direct-pred=spatial`
