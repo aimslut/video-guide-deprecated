@@ -114,4 +114,23 @@ Filter->Scale | 3840x2160 Lanczos
 Output | Disable Faststart
 
 #### Break's Settings
-
+Variable | Value
+------------ | -------------
+Codec | Magix AVC/AAC MP4
+Include Video | Enabled
+Progressive Download | Disabled
+Frame Size | 3840x2160
+Adjust frame size | Disabled
+Profile | High
+Frame rate | 60
+Adjust frame rate | Disabled
+Field Order | None ( Progressive )
+Pixel Aspect Ratio | 1.0
+Reference Frames | 2
+Deblocking | Disabled
+RC Mode | H264_CBR
+Constant Bit Rate | 240,000,000
+Slices | 4
+Encode Mode | Mainconcept AVC
+Audio Bitrate | 320,000
+Project Rendering Quality | Best
