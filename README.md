@@ -98,7 +98,7 @@ Of all the things I've tried, I like the look of the FFMPEG tmix filter the most
 
 1. Install FFMPEG if you haven't already [( Tutorial )](https://www.thewindowsclub.com/how-to-install-ffmpeg-on-windows-10).
 2. Save the `resample_all_descending.bat` .
-3. Edit the `tmix=frames=6` to your desired resample rate ( recording fps/output fps -> 360/6 = 6 ).
+3. Edit the `tmix=frames=6` to your desired resample rate ( recording fps/output fps -> 360/60 = 6 ).
 4. Output file will end with `_resampled`.
 
 There are of course other types of weighting within tmix, feel free to experiment with them yourself.
