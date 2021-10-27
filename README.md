@@ -1,4 +1,4 @@
-# Video Guide ( WIP )
+# Video Guide ( deprecated )
 More than anything, this is a place to compound all my thoughts, ideas or findings relating to video recording/creation/streaming.
 Seeing as I mainly use OBS and not Shadowplay/Share, I'll be focusing on that.
 Personally I've encountered way too many issues with Shadowplay, and it honestly just isn't as flexible as OBS.
